@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.col {
+  border-style: rgba(91, 139, 172, 1);
+  background-color: rgba(91, 139, 172, 1);
+  margin: 20px;
+  padding: 20px;
+  min-width: 400x;
+  height: 300px;
+  border-radius: 50px;
+  text-align: center;
+  text-align: justify;
+  display: flex; /* Gør boksen til en flex container */
+  justify-content: center; /* Centrerer indholdet vandret */
+  align-items: center; /* Centrerer indholdet lodret */
+  flex-wrap: wrap; /* Dette gør, at teksten vil bryde linje og tilpasse sig i stedet for at fortsætte uden for boksen. */
+}
+
+.grid_1-1-1 {
+  padding: 60px;
+}
+.grid_1-1-1-1-1 {
+  margin: 20px;
+}
+
+button {
+  border-style: rgba(1, 76, 143, 1);
+  background-color: rgba(1, 76, 143, 1);
+  border-radius: 30px;
+}
+h1 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 20px;
+}
+
+p {
+  color: white;
+}
+
+.taverna_img {
+  display: block; /* Gør billedet til et blok-element */
+  margin-left: auto; /* Automatiske marginer på venstre side */
+  margin-right: auto; /* Automatiske marginer på højre side */
+}
+.harmonika_section {
+  margin-bottom: 10px; /*mellemrum i mellem boksene*/
+  padding: 10px;
+}
+
+/* Skjul de faktiske checkboxes */
+.harmonika_section input[type="checkbox"] {
+  display: none;
+}
+
+/* Styling af labelen (som fungerer som knappen til at åbne sektionen) */
+.harmonika_section label {
+  display: block;
+  color: blue;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid blue;
+}
+
+/* Styling af indholdet */
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: rgba(242, 241, 237, 1);
+  border: 1px solid blue;
+  margin-top: 5px;
+}
+
+/* Når checkboxen er valgt, vises indholdet */
+.harmonika_section input[type="checkbox"]:checked + label + .accordion-content {
+  display: block;
+}
+/* MEDIA - DESKTOP */
+@media (min-width: 700px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid_1-1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
